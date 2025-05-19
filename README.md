@@ -1,0 +1,2 @@
+# Plushly
+Plush aggregator website
