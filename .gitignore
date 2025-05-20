@@ -37,4 +37,4 @@ build/
 
 
 ### Bash ###
-.sh
+*.sh
