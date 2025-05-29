@@ -3,17 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const StorePage = () => {
   return (
-    <div className="w-full flex justify-center pt-10">
-      <h1 className="w-1/2">
-        Welcome to Plushly
-      </h1>
+    <div className="flex items-start justify-center h-screen pt-10">
+      <h1 className="text-4xl font-bold">Welcome to plushly</h1>
     </div>
-  )
-  
-}
+  );
+};
 
-export default App
+export default StorePage;

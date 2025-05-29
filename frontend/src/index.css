@@ -1,12 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import "tailwindcss";
-@font-face {
-  font-family: Lato;
-  src: url("../src/assets/fonts/Lato-Regular.ttf");
+/* 1. load your font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* 2. Tailwind base/components/utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. set up full-height & global styles */
+:root {
+  --font-lato: 'Lato', sans-serif;
 }
-@theme{
-  --font-lato: Lato,"sans-seriff";
-  
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-lato);
 }
 
 
