@@ -61,7 +61,7 @@ export default function App() {
                   </div>
 
                   <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm">
-                    Short description or price here.
+                    Filler text for description.
                   </p>
                   <button className="mt-4 w-full px-3 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600">
                     View Details
