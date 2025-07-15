@@ -4,7 +4,6 @@
 /* 2. Tailwind base/components/utilities */
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 /* 3. set up full-height & global styles */
 :root {
@@ -28,7 +27,7 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0e0d0d;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,7 +37,7 @@ body {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #fdfdfd;
   text-decoration: inherit;
 }
 a:hover {
@@ -92,3 +91,4 @@ button:focus-visible {
 
 
 
+@tailwind utilities;

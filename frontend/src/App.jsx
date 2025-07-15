@@ -1,86 +1,83 @@
 import React from 'react';
-import { TagIcon } from '@heroicons/react/24/outline';
+import {
+  MagnifyingGlassIcon,
+  TagIcon,
+  SparklesIcon,
+  GiftIcon,
+  Squares2X2Icon,
+  ShoppingBagIcon,
+  InformationCircleIcon,
+  PhoneIcon,
+  UserIcon
+} from '@heroicons/react/24/outline';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* ---------- HEADER ---------- */}
-      <header className="w-full bg-white dark:bg-gray-800 shadow-md flex justify-center items-center">
-        <div className="container mx-auto px-4 py-4 flex flex-col items-center">
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 text-center">
-            Plushly
-          </h1>
-          <nav className="mt-4">
-            <button className="mr-4 px-3 py-1 rounded-md bg-primary-500 text-white hover:bg-primary-600">
-              Login
-            </button>
-            <button className="px-3 py-1 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-              Sign Up
-            </button>
-          </nav>
+    <div className="min-h-screen flex flex-col bg-gray-900 text-gray-200">
+      {/* Top Info Bar */}
+      <div className="flex justify-between items-center text-xs px-6 py-2 bg-gray-800">
+        <span>🎉 Free Shipping on Plushies Over $50</span>
+        <div className="flex space-x-4">
+          <a href="#" className="hover:text-indigo-400">Facebook</a>
+          <a href="#" className="hover:text-indigo-400">Twitter</a>
         </div>
+      </div>
+
+      {/* Main Header */}
+      <header className="sticky top-0 z-50 border-b border-gray-700">
+        {/* Middle Row */}
+        <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+          <div /> {/* left spacer */}
+          <a href="/" className="text-3xl font-bold text-white">Plushly</a>
+          <div className="flex items-center space-x-6">
+            <a href="#" className="hover:text-indigo-400">Sign In</a>
+            <button><MagnifyingGlassIcon className="h-5 w-5" /></button>
+            <div className="relative">
+              <ShoppingBagIcon className="h-5 w-5" />
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">0</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Nav */}
+        <nav className="bg-gray-900 border-t border-gray-700">
+          <ul className="flex justify-center space-x-8 py-3 text-sm uppercase">
+            <li className="flex items-center space-x-1 hover:text-indigo-400">
+              <MagnifyingGlassIcon className="h-4 w-4" />
+              <a href="#">Browse</a>
+            </li>
+            <li className="flex items-center space-x-1 hover:text-indigo-400">
+              <TagIcon className="h-4 w-4" />
+              <a href="#">All Plushies</a>
+            </li>
+            <li className="flex items-center space-x-1 hover:text-indigo-400">
+              <SparklesIcon className="h-4 w-4" />
+              <a href="#">New Arrivals</a>
+            </li>
+            <li className="flex items-center space-x-1 hover:text-indigo-400">
+              <GiftIcon className="h-4 w-4" />
+              <a href="#">Deals & Discounts</a>
+            </li>
+            <li className="flex items-center space-x-1 hover:text-indigo-400">
+              <Squares2X2Icon className="h-4 w-4" />
+              <a href="#">Categories</a>
+            </li>
+            <li className="flex items-center space-x-1 hover:text-indigo-400">
+              <InformationCircleIcon className="h-4 w-4" />
+              <a href="#">About</a>
+            </li>
+            <li className="flex items-center space-x-1 hover:text-indigo-400">
+              <PhoneIcon className="h-4 w-4" />
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
-      {/* ---------- WRAPPER TO CENTER MAIN CONTENT ---------- */}
-      <div className="w-full max-w-5xl mx-auto flex-1 flex flex-col">
-        {/* ---------- MAIN CONTENT ---------- */}
-        <main className="flex-1 px-4 py-8 flex flex-col items-center">
-          {/* ----- Centered Search Input ----- */}
-          <section className="mb-8 w-full">
-            <input
-              type="text"
-              placeholder="Search plushies..."
-                  className="
-      block
-      mx-auto
-      w-1/4              /* makes it ~25% of parent width */
-      px-4               /* left/right padding */
-      py-3               /* top/bottom padding (thicker) */
-      border border-gray-300 dark:border-gray-600
-      rounded-md
-      focus:outline-none focus:ring-2 focus:ring-primary-400
-      dark:bg-gray-700 dark:text-gray-100
-    "
-  />
-          </section>
-
-          {/* ----- Centered Plushie Grid ----- */}
-          <section className="w-full">
-            <h2 className="text-xl font-semibold mb-4 text-center">Featured Plushies</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
-              {/* Example Card – copy/paste this block for each plushie */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden">
-
-                <div className="p-4">
-                  {/* Title + Icon */}
-                  <div className="flex items-center">
-                    <TagIcon className="inline h-[1em] w-[1em] text-gray-500 dark:text-gray-400 mr-1" />
-                    <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">
-                      Plushie Name
-                    </h3>
-                  </div>
-
-                  <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm">
-                    Filler text for description.
-                  </p>
-                  <button className="mt-4 w-full px-3 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600">
-                    View Details
-                  </button>
-                </div>
-              </div>
-              {/* End Example Card */}
-              {/* …more cards here */}
-            </div>
-          </section>
-        </main>
-
-        {/* ---------- FOOTER ---------- */}
-        <footer className="bg-gray-200 dark:bg-gray-900 py-6">
-          <div className="container mx-auto px-4 text-center text-gray-700 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} Plushly. All rights reserved.
-          </div>
-        </footer>
-      </div>
+      {/* Rest of page */}
+      <main className="flex-1 flex items-center justify-center">
+        <h1 className="text-2xl font-bold">Welcome to Plushly</h1>
+      </main>
     </div>
   );
 }
