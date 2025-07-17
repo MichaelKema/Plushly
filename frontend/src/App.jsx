@@ -56,7 +56,7 @@ export default function App() {
                 key={label}
                 className="flex flex-col items-center hover:text-indigo-400 whitespace-nowrap"
               >
-                {/* Bottom nav icons reduced to h-2 w-2 */}
+                {/* Top Bar */}
                 <Icon className="w-1/7 h-auto" />
                 <span>{label}</span>
               </li>
