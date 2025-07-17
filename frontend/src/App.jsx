@@ -12,64 +12,55 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function App() {
+  const navItems = [
+    { Icon: MagnifyingGlassIcon, label: 'Browse' },
+    { Icon: TagIcon,            label: 'All Plushies' },
+    { Icon: SparklesIcon,       label: 'New Arrivals' },
+    { Icon: GiftIcon,           label: 'Deals Discounts' },
+    { Icon: Squares2X2Icon,     label: 'Categories' },
+    { Icon: InformationCircleIcon, label: 'About' },
+    { Icon: PhoneIcon,            label: 'Contact' },
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-gray-200">
+    <div className="min-h-screen w-full flex flex-col bg-gray-900 text-gray-200">
       {/* Top Info Bar */}
-      <div className="flex justify-between items-center text-xs px-6 py-2 bg-gray-800">
-        <span>🎉 Free Shipping on Plushies Over $50</span>
+      <div className="flex justify-between items-center text-xs px-4 py-2 bg-gray-800">
+        
         <div className="flex space-x-4">
-          <a href="#" className="hover:text-indigo-400">Facebook</a>
-          <a href="#" className="hover:text-indigo-400">Twitter</a>
+
         </div>
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 border-b border-gray-700">
+      <header className="sticky top-0 z-50 border-b border-gray-700 bg-gray-900">
         {/* Middle Row */}
-        <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+        <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
           <div /> {/* left spacer */}
           <a href="/" className="text-3xl font-bold text-white">Plushly</a>
           <div className="flex items-center space-x-6">
-            <a href="#" className="hover:text-indigo-400">Sign In</a>
-            <button><MagnifyingGlassIcon className="h-5 w-5" /></button>
+            
+
             <div className="relative">
-              <ShoppingBagIcon className="h-5 w-5" />
+              <ShoppingBagIcon className="h-2 w-2 text-gray-200 flex-shrink-0" />
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">0</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Nav */}
-        <nav className="bg-gray-900 border-t border-gray-700">
-          <ul className="flex justify-center space-x-8 py-3 text-sm uppercase">
-            <li className="flex items-center space-x-1 hover:text-indigo-400">
-              <MagnifyingGlassIcon className="h-4 w-4" />
-              <a href="#">Browse</a>
-            </li>
-            <li className="flex items-center space-x-1 hover:text-indigo-400">
-              <TagIcon className="h-4 w-4" />
-              <a href="#">All Plushies</a>
-            </li>
-            <li className="flex items-center space-x-1 hover:text-indigo-400">
-              <SparklesIcon className="h-4 w-4" />
-              <a href="#">New Arrivals</a>
-            </li>
-            <li className="flex items-center space-x-1 hover:text-indigo-400">
-              <GiftIcon className="h-4 w-4" />
-              <a href="#">Deals & Discounts</a>
-            </li>
-            <li className="flex items-center space-x-1 hover:text-indigo-400">
-              <Squares2X2Icon className="h-4 w-4" />
-              <a href="#">Categories</a>
-            </li>
-            <li className="flex items-center space-x-1 hover:text-indigo-400">
-              <InformationCircleIcon className="h-4 w-4" />
-              <a href="#">About</a>
-            </li>
-            <li className="flex items-center space-x-1 hover:text-indigo-400">
-              <PhoneIcon className="h-4 w-4" />
-              <a href="#">Contact</a>
-            </li>
+        {/* Bottom Nav with full-width grid */}
+        <nav className="w-full bg-gray-900 border-t border-gray-800">
+          <ul className="grid grid-cols-7 items-center gap-y-4 gap-x-6 py-3 px-6 text-sm uppercase text-gray-200">
+            {navItems.map(({ Icon, label }) => (
+              <li
+                key={label}
+                className="flex flex-col items-center hover:text-indigo-400 whitespace-nowrap"
+              >
+                {/* Bottom nav icons reduced to h-2 w-2 */}
+                <Icon className="w-1/7 h-auto" />
+                <span>{label}</span>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
