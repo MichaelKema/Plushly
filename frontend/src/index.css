@@ -64,7 +64,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -75,7 +75,34 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.hero-icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
+.hero-icon-button svg {
+  width: 24px; /* adjust the size as needed */
+  height: 24px; /* adjust the size as needed */
+  fill: #fdfdfd; /* adjust the color as needed */
+}
+
+.hero-icon {
+  width: 24px; /* adjust the size as needed */
+  height: 24px; /* adjust the size as needed */
+  fill: #fdfdfd00; /* adjust the color as needed */
+  padding: 8px; /* add some padding to create a box around the icon */
+  border-radius: 50%; /* make the box a circle */
+  background-color: transparent; /* make the box transparent */
+  border: 1px solid #fdfdfd; /* add a border to the box */
+  cursor: pointer; /* change the cursor to a pointer */
+  display: block; /* add this to ensure the icon is displayed as a block element */
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -93,4 +120,20 @@ button:focus-visible {
 
 
 @tailwind utilities;
+
+.StoreButton  {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.StoreButto:hover {
+  border-color: #646cff;
+}
 
