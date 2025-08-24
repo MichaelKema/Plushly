@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 
 dev-notes.txt
-
+requirements.txt
 ### STS ###
 .apt_generated
 .classpath
